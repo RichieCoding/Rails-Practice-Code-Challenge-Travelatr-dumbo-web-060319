@@ -1,0 +1,12 @@
+<h1> Destination </h1>
+
+<h2>Most Recent Posts</h2>
+
+<% @destination.five_most_post.each do |post| %>
+  <p><%= link_to post.title, post %></p>
+<% end %>
+
+<h2> Featured Post </h2>
+
+<%= link_to @destination.most_popular.title, @destination.most_popular %>
+

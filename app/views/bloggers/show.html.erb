@@ -1,0 +1,23 @@
+<h1>Name: <%= @blogger.name %></h1>
+
+<h3> Blogs </h3>
+<% @blogger.posts.each do |post|%>
+ <p><%= "Title: #{post.title} --- Likes: #{post.likes}" %></p>
+<% end %>
+
+<h3> Featured Post </h3>
+
+<% if @blogger.posts.count != 0 %>
+  <%= link_to @blogger.most_popular.title, @blogger.most_popular %>
+<% else %>
+  <p> You have no Posts, <%= link_to "Would you like to make a new post", new_post_path %> </p>
+  <p> </p>
+<% end %>
+
+<h3>Top 5 Destinations</h3>
+
+<% @blogger.top_five_destination.each do |destination| %>
+  <p><%= destination.name %></p>
+<% end %>
+
+
