@@ -1,0 +1,8 @@
+<h1> Post </h1>
+
+<p>Title: <%= @post.title %></p>
+<p>Content: <%= @post.content %></p>
+
+<h2> Aurthor </h2>
+<%=link_to @post.blogger.name, @post.blogger%>
+
